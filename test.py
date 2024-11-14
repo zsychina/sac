@@ -21,6 +21,7 @@ agent.load_policy()
 
 for ep in range(10):
     state, info = env.reset()
+    ep_return = 0
     done = False
     while not done:
         action = agent.take_action(state)
@@ -29,6 +30,10 @@ for ep in range(10):
             done = True
             
         state = next_state
+
+        ep_return += reward
+
+    print(f'{ep=} {ep_return=}')
 
 
 env.close()
