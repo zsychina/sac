@@ -2,11 +2,10 @@ import gymnasium as gym
 from agent import Agent
 
 
-env = gym.make('BipedalWalker-v3', render_mode='rgb_array')
+env = gym.make('HalfCheetah-v4', render_mode='rgb_array')
 env = gym.wrappers.RecordVideo(
     env=env,
     video_folder='./videos',
-    episode_trigger=lambda t: t % 1 == 0,
 )
 
 agent = Agent(

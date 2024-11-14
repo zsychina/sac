@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 from agent import Agent
 
-env = gym.make('BipedalWalker-v3')
+env = gym.make('HalfCheetah-v4')
 
 
 agent = Agent(
@@ -12,7 +12,7 @@ agent = Agent(
     action_bound=env.action_space.high[0],
     target_entropy=-env.action_space.shape[0],
     hidden_dim=512,
-    device='cuda:3',
+    device='cuda',
 )
 
 
@@ -63,5 +63,5 @@ plt.close()
 agent.save_policy()
 
 
-
+env.close()
 
