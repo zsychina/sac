@@ -18,7 +18,7 @@ agent = Agent(
 
 return_list = []
 step_return_list = []
-for ep in range(500):
+for ep in range(100):
     state, info = env.reset()
     
     ep_return = 0
