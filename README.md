@@ -1,4 +1,4 @@
-# sac-segment
+# sac
 
 Mainly from [Hands on RL](https://github.com/boyu-ai/Hands-on-RL) with minor modifications.
 
